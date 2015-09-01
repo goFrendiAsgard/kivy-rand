@@ -1,0 +1,53 @@
+<Screen>    
+    orientation: 'vertical'    
+    GridLayout:
+        size_hint_y: 200
+        cols: 2
+        padding: 10
+        spacing: 10
+        Label:
+            text: 'Minimum Value'
+        TextInput:
+            id: minInput
+            text: '1'
+            font_size: 30
+    GridLayout:
+        size_hint_y: 200
+        cols: 2
+        padding: 10
+        spacing: 10
+        Label:
+            text: 'Maximum Value'
+        TextInput:
+            id: maxInput
+            text: '6'
+            font_size: 30
+    GridLayout:
+        size_hint_y: 200
+        cols: 2
+        padding: 10
+        spacing: 10
+        Label:
+            text: 'Trial'
+        TextInput:
+            id: trialInput
+            text: '1'
+            font_size: 30
+    GridLayout:
+        size_hint_y: 200
+        cols: 2
+        padding: 10
+        spacing: 10
+        Button:
+            id: generateAllowDuplicateButton
+            text: 'Generate'
+            on_press: root.button_click(generateAllowDuplicateButton)
+        Button:
+            id: generateNoDuplicateButton
+            text: 'Generate\n(No Duplicate)'
+            on_press: root.button_click(generateNoDuplicateButton)
+    Label:
+        size_hint_y: 400
+        id: randomLabel
+        text: '[RANDOM]'
+        font_size: 50
